@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#__next {
+  min-height: 100%;
+}
+
+section, div, p, h1, h2, h3 {
+  border: none !important;
+  border-bottom: none !important;
+}
+
+body {
+  min-height: 100%;
+  padding-top: 0;
+  margin: 0;
+  -ms-overflow-style: auto;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Optional: For smoother sections */
+section {
+  min-height: 100vh;
+}
+
+
