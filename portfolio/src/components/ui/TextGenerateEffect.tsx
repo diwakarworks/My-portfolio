@@ -36,7 +36,7 @@ export const TextGenerateEffect = ({
         ease: "easeInOut",
       }
     );
-  }, []);
+  }, [animate, duration, filter]);
 
   return (
     <div className={cn("font-bold", className)}>
