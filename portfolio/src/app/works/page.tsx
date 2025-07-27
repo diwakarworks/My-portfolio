@@ -170,17 +170,19 @@ const projects = [
     source_code_link: 'https://github.com/diwakarworks/MoodBoard'
   },
   {
-    name: 'Groovo',
-    description: 'Groovo is a sleek and dynamic music streaming platform that allows users to explore tracks, manage playlists, and enjoy a smooth listening experience. ',
+    name: 'Invoice SaaS',
+    description: 'Invoice SaaS is a modern billing platform that enables users to create invoices, manage clients, and track payments with real-time webhook updates.',
     tags: [
-      { name: 'Next.js', color: 'text-pink-500' },
-      { name: 'Typescript', color: 'text-red-500' },
-      { name: 'tailwind', color: 'text-purple-500' },
-      { name: 'daisyUI', color: 'text-red-500' },
+      { name: 'Next.js', color: 'text-blue-500' },
+      { name: 'Express.js', color: 'text-green-500' },
+      { name: 'Stripe', color: 'text-purple-500' },
+      { name: 'Auth0', color: 'text-yellow-500' },
+      { name: 'TailwindCSS', color: 'text-cyan-500' }
     ],
-    image: '/images/groovo.png',
-    source_code_link: 'https://github.com/diwakarworks/SpotifyClone'
-  },
+    image: '/images/invoice.png', 
+    source_code_link: 'https://github.com/diwakarworks/InvoicePro'
+  }
+
 ];
 
 const Works: React.FC = () => {
@@ -203,7 +205,6 @@ const Works: React.FC = () => {
           ))}
         </div>
       </div>
-
     </div>
   );
 };
