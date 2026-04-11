@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaGithub, FaXTwitter, FaLinkedin} from "react-icons/fa6";
+import { FaGithub, FaXTwitter, FaLinkedin, FaMedium} from "react-icons/fa6";
 
 import { SiLeetcode } from "react-icons/si";
 
@@ -20,11 +20,11 @@ export default function  Footer(){
         <FaXTwitter size={24} />
       </a>
       <a
-        href="https://www.linkedin.com/in/diwakar-6719b0213"
+        href="https://medium.com/@diwakarlewis"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaLinkedin size={24} />
+        <FaMedium size={24} />
       </a>
       <a
         href="https://leetcode.com/u/DiwakarG"
