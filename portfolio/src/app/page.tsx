@@ -57,7 +57,7 @@ export default function Home() {
 
             <Button variant="outline" className="text-white border-white text-lg px-6 py-3 rounded-xl">
               <a
-                href="/Diwakar_G_B.Tech(IT)2022_7.56CGPA_MERN.pdf"
+                href="/Diwakar_G_Resume.pdf"
                 download
                 className="flex items-center"
               >
