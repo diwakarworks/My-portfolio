@@ -4,7 +4,7 @@ import { Server, Briefcase } from "lucide-react";
 const experience = {
   company: "RR IT Solutions",
   role: "Full Stack Developer",
-  duration: "May 2024 – Apr 2026",
+  duration: "May 2024 – June 2026",
   icon: Server,
   description: [
     "Developed full-stack web applications using React.js, Node.js, and NestJS, ensuring responsive and high-performance user experiences across all devices.",
