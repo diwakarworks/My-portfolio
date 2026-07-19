@@ -1,80 +1,109 @@
 "use client";
-import { Server, Briefcase } from "lucide-react";
 
-const experience = {
-  company: "RR IT Solutions",
-  role: "Full Stack Developer",
-  duration: "May 2024 – June 2026",
-  icon: Server,
-  description: [
-    "Developed full-stack web applications using React.js, Node.js, and NestJS, ensuring responsive and high-performance user experiences across all devices.",
-    "Designed and integrated RESTful APIs, implemented authentication and authorization using JWT, and structured scalable database models with MongoDB.",
-    "Translated Figma designs into modular and reusable React components, optimized rendering performance, and ensured seamless cross-platform responsiveness.",
-    "Improved application efficiency through lazy loading, code splitting, and browser-level performance tuning for enhanced scalability and reliability.",
-    "Collaborated using Git/GitHub within Agile workflows and deployed production-ready applications on Microsoft Azure for enterprise-grade availability.",
-  ],
-};
+const experiences = [
+  {
+    company: "Foyer Technology",
+    companyUrl: "https://foyertech.com",
+    role: "Full Stack Developer",
+    duration: "Jul 2026 — Present",
+    current: true,
+    description: [
+      "Contributing to the design and development of web applications using modern JavaScript technologies.",
+      "Collaborating with cross-functional teams to build and maintain responsive front-end interfaces and backend services.",
+      "Working across the full development lifecycle, from planning through testing and deployment.",
+      "Participating in Agile workflows, code reviews, and version control practices.",
+    ],
+  },
+  {
+    company: "RR IT Solutions",
+    companyUrl: "https://www.rritsolutions.com",
+    role: "Full Stack Developer",
+    duration: "May 2024 — Jul 2026",
+    current: false,
+    description: [
+      "Developed full-stack web applications using React.js, Node.js, and NestJS, ensuring responsive, high-performance experiences across devices.",
+      "Designed and integrated RESTful APIs; implemented JWT authentication and authorization; structured scalable MongoDB data models.",
+      "Translated Figma designs into modular, reusable React components with optimized rendering performance.",
+      "Improved application efficiency through lazy loading, code splitting, and browser-level performance tuning.",
+      "Deployed production-ready applications on Microsoft Azure within an Agile, Git-based workflow.",
+    ],
+  },
+];
 
 export default function WorkExperience() {
-  const Icon = experience.icon;
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-8">
-      <div className="max-w-4xl w-full">
-
-        {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center p-2 bg-blue-500/10 rounded-lg mb-4">
-            <Briefcase className="w-8 h-8 text-blue-400" />
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Work Experience
-          </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+    <div className="min-h-screen bg-[#0a0a0a] flex justify-center px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-2xl w-full">
+        <div className="mb-12">
+          <h1 className="text-2xl font-semibold text-white mb-12">Work History</h1>
         </div>
 
-        {/* Experience Card */}
-        <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 shadow-2xl">
-          
-          {/* Card Header */}
-          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl">
-                <Icon className="w-6 h-6 text-blue-400" />
+        <div>
+          {experiences.map((exp, i) => (
+            <div
+              key={i}
+              className="grid gap-5"
+              style={{ gridTemplateColumns: "20px 1fr" }}
+            >
+              <div className="flex flex-col items-center">
+                <div
+                  className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
+                    exp.current ? "bg-blue-400" : "bg-gray-600"
+                  }`}
+                />
+                {i !== experiences.length - 1 && (
+                  <div className="w-px flex-1 bg-gray-800 mt-1.5" />
+                )}
               </div>
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-1">
-                  {experience.role}
-                </h2>
-                <a
-                  href="https://www.rritsolutions.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 font-semibold text-lg transition-colors duration-200"
-                >
-                  {experience.company}
-                </a>
+
+              <div className={i === experiences.length - 1 ? "pb-0" : "pb-10"}>
+                <div className="flex items-baseline justify-between flex-wrap gap-x-3 gap-y-1 mb-0.5">
+                  <h3 className="text-white font-medium text-base">
+                    {exp.role}
+                  </h3>
+                  <span className="text-xs text-gray-500 whitespace-nowrap">
+                    {exp.duration}
+                  </span>
+                </div>
+
+                <div className="mb-3 flex items-center gap-2">
+                  {exp.companyUrl ? (
+                    <a
+                      href={exp.companyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-gray-300 font-medium hover:text-white transition-colors"
+                    >
+                      {exp.company}
+                    </a>
+                  ) : (
+                    <span className="text-sm text-gray-300 font-medium">
+                      {exp.company}
+                    </span>
+                  )}
+                  {exp.current && (
+                    <span className="text-[11px] text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">
+                      Current
+                    </span>
+                  )}
+                </div>
+
+                <ul className="space-y-2">
+                  {exp.description.map((point, j) => (
+                    <li
+                      key={j}
+                      className="text-sm text-gray-400 leading-relaxed pl-4 relative"
+                    >
+                      <span className="absolute left-0">—</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <span className="inline-flex items-center px-4 py-2 bg-slate-700/50 rounded-full text-sm text-gray-300 font-medium whitespace-nowrap">
-              {experience.duration}
-            </span>
-          </div>
-
-          {/* Description */}
-          <ul className="space-y-3">
-            {experience.description.map((point, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-3 text-gray-300 leading-relaxed"
-              >
-                <span className="mt-2 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
-                <span className="flex-1">{point}</span>
-              </li>
-            ))}
-          </ul>
+          ))}
         </div>
-       </div>
       </div>
+    </div>
   );
 }
