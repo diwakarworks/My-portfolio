@@ -131,43 +131,46 @@ const projects = [
       { name: 'tailwindcss', color: 'text-orange-500' },
     ],
     image: '/images/cinemate.webp',
-    source_code_link: 'https://github.com/diwakarworks/LetterBoxd-Clone',
+    source_code_link: 'https://github.com/diwakarworks/Cinemate',
   },
   {
-    name: 'Game Haven',
-    description: 'Game Haven is a feature-rich gaming platform that lets users discover, explore, and track their favorite video games. With an immersive UI and advanced filtering, users can find games by genre, platform, and popularity while watching integrated trailers for a complete experience',
+    name: 'TravelPlanner',
+    description: 'TravelPlanner is a full-stack travel planning app that lets users plan trips, view places on maps, and upload photos. It uses GitHub OAuth for authentication, Prisma for database management, GCP for maps and location visualization, and UploadThing for image uploads.',
     tags: [
-      { name: 'redux', color: 'text-pink-500' },
-      { name: 'node', color: 'text-red-500' },
-      { name: 'react', color: 'text-purple-500' },
-      { name: 'mongodb', color: 'text-red-500' },
+      { name: 'nextjs', color: 'text-white' },
+      { name: 'typescript', color: 'text-blue-500' },
+      { name: 'tailwind', color: 'text-cyan-500' },
+      { name: 'prisma', color: 'text-green-500' },
+      { name: 'gcp', color: 'text-yellow-500' },
     ],
-    image: '/images/game-haven.webp',
-    source_code_link: 'https://github.com/diwakarworks/GameHaven'
+    image: '/images/travelplanner.png',
+    source_code_link: 'https://github.com/diwakarworks/Travel-Planner-App'
   },
   {
-    name: 'BookNook',
-    description: 'Book Nook is a modern book discovery and reading companion app that lets users explore, organize, and bookmark their favorite reads. It showcases intuitive state management using Context API and a clean, user-friendly interface.',
+    name: 'StreamMatch',
+    description: 'StreamMatch is a modern dating app where users can match and chat in real time. It uses Supabase for authentication and database management, while Stream.io powers real-time messaging between matched users. Deployed on Vercel.',
     tags: [
-      { name: 'Context API ', color: 'text-pink-500' },
-      { name: 'node', color: 'text-red-500' },
-      { name: 'react', color: 'text-purple-500' },
-      { name: 'mongodb', color: 'text-red-500' },
+      { name: 'nextjs', color: 'text-white' },
+      { name: 'supabase', color: 'text-green-500' },
+      { name: 'stream-chat', color: 'text-blue-500' },
+      { name: 'typescript', color: 'text-sky-500' },
+      { name: 'tailwind', color: 'text-cyan-500' },
     ],
-    image: '/images/book-nook.jpg',
-    source_code_link: 'https://github.com/diwakarworks/BookNook'
+    image: '/images/streammatch.png',
+    source_code_link: 'https://github.com/diwakarworks/Dating-App'
   },
   {
-    name: 'MoodBoard',
-    description: 'Moodboard is a creative visual journaling app that lets users curate, organize, and express their moods through images and themes. It features clean UI design and efficient state handling.',
+    name: 'GymAI',
+    description: 'GymAI is a full-stack AI-powered workout planning app that generates personalized training plans and diet plans based on your fitness profile. Built with React, Express, TypeScript, and PostgreSQL.',
     tags: [
-      { name: 'tailwind', color: 'text-pink-500' },
-      { name: 'node', color: 'text-red-500' },
       { name: 'react', color: 'text-purple-500' },
-      { name: 'mongodb', color: 'text-red-500' },
+      { name: 'express', color: 'text-gray-400' },
+      { name: 'node', color: 'text-green-500' },
+      { name: 'typescript', color: 'text-blue-500' },
+      { name: 'postgresql', color: 'text-sky-500' },
     ],
-    image: '/images/moodboard.png',
-    source_code_link: 'https://github.com/diwakarworks/MoodBoard'
+    image: '/images/gymai.png',
+    source_code_link: 'https://github.com/diwakarworks/GYMAI'
   },
   {
     name: 'Invoice SaaS',
@@ -179,10 +182,9 @@ const projects = [
       { name: 'Auth0', color: 'text-yellow-500' },
       { name: 'TailwindCSS', color: 'text-cyan-500' }
     ],
-    image: '/images/invoice.png', 
+    image: '/images/invoice.png',
     source_code_link: 'https://github.com/diwakarworks/InvoicePro'
   }
-
 ];
 
 const Works: React.FC = () => {

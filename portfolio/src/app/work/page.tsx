@@ -5,7 +5,7 @@ const experiences = [
     company: "Foyer Technology",
     companyUrl: "https://foyertech.com",
     role: "Full Stack Developer",
-    duration: "Jul 2026 — Present",
+    duration: "Jul 2026 — Septmenber 2026",
     current: true,
     description: [
       "Contributing to the design and development of web applications using modern JavaScript technologies.",
@@ -79,11 +79,6 @@ export default function WorkExperience() {
                   ) : (
                     <span className="text-sm text-gray-300 font-medium">
                       {exp.company}
-                    </span>
-                  )}
-                  {exp.current && (
-                    <span className="text-[11px] text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">
-                      Current
                     </span>
                   )}
                 </div>
